@@ -101,6 +101,26 @@ img{
     background-color: var(--first-color);
 }
 
+.section-title1{
+    position: relative;
+    font-size: var(--h2-font-size);
+    color: var(--dark-color);
+    margin: var(--mb-4) 0;
+    text-align: center;
+    margin-right: 410px;
+}
+.section-title1::after{
+    position: absolute;
+    content: "";
+    width: 32px;
+    height: .18rem;
+    left: 0;
+    right: 0;
+    margin: auto;
+    top: 3rem;
+    background-color: var(--first-color);
+}
+
 /*===== LAYOUT =====*/
 .bd-grid{
     max-width: 1024px;
