@@ -204,6 +204,7 @@ img{
 .home__container{
     height: calc(100vh - var(--header-height));
     row-gap: 5rem;
+    top: -20px;
     
 }
 .home__title{
@@ -302,6 +303,9 @@ img{
 }
 .skills__img img{
     border-radius: .5rem;
+    /* height: 23rem;
+    width: 27rem;
+    margin: auto */
 }
 
 /* ===== PORTFOLIO =====*/
@@ -367,7 +371,6 @@ img{
     border-radius: .5rem;
 }
 .contact__button{
-    display: block;
     background-color: var(--first-color);
     color: var(--white-color);
     padding: .75rem 2.5rem;
@@ -378,6 +381,7 @@ img{
     font-size: var(--normal-font-size);
     cursor: pointer;
 }
+
 
 /* ===== FOOTER=====*/
 .footer{
@@ -404,13 +408,21 @@ img{
 .footer__social:hover{
     color: var(--first-color);
 }
+.homeImage{
+    margin: 0px;
+}
 
 /* ===== MEDIA QUERIES =====*/
 /* For small devices */
-@media screen and (max-width: 320px) {
-  .home__img {
-    width: 230px;
-  }
+
+@media screen and (min-width: 320px) and (max-width: 768px) {
+    #left_content_home{
+        margin-top: 80px;
+    }
+    .homeImage{
+        margin:-6rem auto auto auto;
+
+    }
 }
 
 @media screen and (min-width: 768px){
@@ -452,14 +464,25 @@ img{
     }
 
     .home__container{
+        display: flex;
+        position: relative;
+        /* top: 120px; */
+        align-items: center;
+        justify-content: space-around;
+        margin: 0px 20px 0px 14px;
+
         height: 100vh;
         grid-template-rows: 1.7fr 1fr;
         row-gap: 0;
         margin-bottom: -90px;
+
     }
     .home__img{
         width: 524px;
         right: 10%;
+    }
+    #left_content_home{
+
     }
 
     .about__container{
@@ -512,9 +535,7 @@ img{
 @media screen and (min-height: 721px) {
     .home__container {
         height: 640px;
+        margin-top: 120px;
     }
-    .home__img {
-        width: 500px;
-        right: 10%;
-    }
+    
 }
